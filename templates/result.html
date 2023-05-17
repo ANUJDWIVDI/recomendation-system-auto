@@ -1,0 +1,26 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Recommendations - Results</title>
+    <!-- Include custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Product Recommendations - Results</h1>
+
+    {% if products %}
+        <h2>Finalized Products:</h2>
+        <ul>
+            {% for product in products %}
+                <li>{{ product['name'] }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No products match your selection.</p>
+    {% endif %}
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

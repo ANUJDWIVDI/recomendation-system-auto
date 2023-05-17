@@ -1,0 +1,52 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Recommendations</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+    <!-- Include custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Recommendations</h1>
+        <form method="POST" action="/">
+            <div class="question">
+                <h2>Question 1</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="option1">
+                            <input type="checkbox" name="checkbox" id="option1" value="['Books', 'tag1', 'tag2', 'tag3']">
+                            <img src="{{ url_for('static', filename='book1.jfif') }}" alt="Image 1">
+                        </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="option2">
+                            <input type="checkbox" name="checkbox" id="option2" value="['book2', 'tag4', 'tag5', 'tag6']">
+                            <img src="{{ url_for('static', filename='book2.jfif') }}" alt="Image 2">
+                        </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="option3">
+                            <input type="checkbox" name="checkbox" id="option3" value="['book3', 'tag7', 'tag8', 'tag9']">
+                            <img src="{{ url_for('static', filename='book3.jfif') }}" alt="Image 3">
+                        </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="option4">
+                            <input type="checkbox" name="checkbox" id="option4" value="['book4', 'tag10', 'tag11', 'tag12']">
+                            <img src="{{ url_for('static', filename='book1.jpg') }}" alt="Image 4">
+                        </label>
+                    </div>
+                    <!-- Add more options and corresponding images here -->
+                </div>
+            </div>
+            <!-- Add more questions and options here -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
